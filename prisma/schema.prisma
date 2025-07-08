@@ -1,0 +1,22 @@
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model Url {
+  id           String    @id @default(cuid())
+  original_url String    @db.Text
+  short_code   String    @unique @db.VarChar(40)
+  is_custom    Boolean   @default(false)
+  is_active    Boolean   @default(true)
+  expires_at   DateTime?
+  click_count  Int       @default(0)
+  created_at   DateTime  @default(now())
+  updated_at   DateTime  @updatedAt
+
+  @@map("urls")
+}

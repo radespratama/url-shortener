@@ -1,0 +1,21 @@
+{
+  "name": "url-short",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "cli": "node cli.js",
+    "server": "node --watch server.js"
+  },
+  "author": "Putu Rades Pratama",
+  "license": "ISC",
+  "dependencies": {
+    "@prisma/client": "^6.11.1",
+    "dotenv": "^17.0.1",
+    "express": "^5.1.0",
+    "inquirer": "^8.2.6",
+    "moment": "^2.30.1"
+  },
+  "devDependencies": {
+    "prisma": "^6.11.1"
+  }
+}
